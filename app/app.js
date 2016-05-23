@@ -65,11 +65,11 @@ const rootRoute = {
 
 const DEBUG = process.env.NODE_ENV === 'development' ? true : false
 
-if (DEBUG) {
-  if (window.devToolsExtension) {
-    window.devToolsExtension.open()
-  }
-}
+// if (DEBUG) {
+//   if (window.devToolsExtension) {
+//     window.devToolsExtension.open()
+//   }
+// }
 
 ReactDOM.render(
   <Provider store={store}>
