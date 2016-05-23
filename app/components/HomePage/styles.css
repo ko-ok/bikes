@@ -41,3 +41,19 @@ body.fontLoaded {
   display: block;
   position: absolute;
 }
+
+.site_row {
+  height: 500vh;
+}
+
+a {
+  padding: 10px;
+  color: #fff;
+}
+
+.nav {
+  position: absolute;
+  z-index: 100;
+  float: right;
+}
+
