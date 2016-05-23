@@ -39,4 +39,5 @@ body.fontLoaded {
   width: 100%;
   margin: 0 auto;
   display: block;
+  position: absolute;
 }

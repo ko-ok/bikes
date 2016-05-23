@@ -31,11 +31,11 @@ export default class HomePage extends React.Component {
       <Row>
         <Col xs={12} md={12}>
           <Image className={styles.logo} src={Background} />
-          <Image className={styles.logo} src={Tree1} />
-          <Image className={styles.logo} src={Tree2} />
-          <Image className={styles.logo} src={Tree3} />
-          <Image className={styles.logo} src={Tree4} />
           <Image className={styles.logo} src={Tree5} />
+          <Image className={styles.logo} src={Tree4} />
+          <Image className={styles.logo} src={Tree3} />
+          <Image className={styles.logo} src={Tree2} />
+          <Image className={styles.logo} src={Tree1} />
           <Image className={styles.logo} src={Sun} />
           <Image className={styles.logo} src={Clouds} />
           <Image className={styles.logo} src={Birds} />
