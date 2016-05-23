@@ -38,6 +38,23 @@ const history = syncHistoryWithStore(browserHistory, store, {
   selectLocationState: selectLocationState(),
 });
 
+const config = {
+  env : process.env.NODE_ENV || 'development',
+}
+
+// config.globals = {
+//   'process.env'  : {
+//     'NODE_ENV' : JSON.stringify(config.env)
+//   },
+//   'NODE_ENV'     : config.env,
+//   '__DEV__'      : config.env === 'development',
+//   '__PROD__'     : config.env === 'production',
+//   '__TEST__'     : config.env === 'test',
+//   '__DEBUG__'    : config.env === 'development',
+//   '__COVERAGE__' : config.env === 'test',
+//   '__BASENAME__' : JSON.stringify(process.env.BASENAME || '')
+// }
+
 // Set up the router, wrapping all Routes in the App component
 import App from 'containers/App';
 import createRoutes from './routes';
@@ -45,6 +62,14 @@ const rootRoute = {
   component: App,
   childRoutes: createRoutes(store),
 };
+
+const DEBUG = process.env.NODE_ENV === 'development' ? true : false
+
+if (DEBUG) {
+  if (window.devToolsExtension) {
+    window.devToolsExtension.open()
+  }
+}
 
 ReactDOM.render(
   <Provider store={store}>
