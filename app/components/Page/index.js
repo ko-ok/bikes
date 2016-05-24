@@ -46,8 +46,8 @@ export default class Page extends React.Component {
             </Row>            
             <Image className={styles.logo} src={Background} />
 
-            <Img className={styles.logo} src={Tree2} />
-            <Img className={styles.logo} src={Tree1} />
+            <Img className={styles.logo} src={Tree2} timeSet={1} />
+            <Img className={styles.logo} src={Tree1} timeSet={2} />
             
           </Col>        
         </Row>
