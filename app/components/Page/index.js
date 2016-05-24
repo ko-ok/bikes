@@ -51,15 +51,33 @@ export default class Page extends React.Component {
             
           </Col>        
         </Row>
-        <Row className={styles.site_row}>
+        <Row id="who" className={styles.site_row}>
           <Col xs={12} md={12}>
-            <h1> Some text</h1>
+            <h1>Who we are</h1>
             <Image src={Background} />          
           </Col>        
         </Row>
-        <Row className={styles.site_row}>
+        <Row id="what" className={styles.site_row}>
           <Col xs={12} md={12}>
-            <h1> Some more text</h1>
+            <h1>What we are doing</h1>
+            <Image src={Background} />          
+          </Col>        
+        </Row>
+        <Row id="where" className={styles.site_row}>
+          <Col xs={12} md={12}>
+            <h1>Where we are going</h1>
+            <Image src={Background} />          
+          </Col>        
+        </Row>
+        <Row id="where" className={styles.site_row}>
+          <Col xs={12} md={12}>
+            <h1>How you can help?</h1>
+            <Image src={Background} />          
+          </Col>        
+        </Row>
+        <Row id="where" className={styles.site_row}>
+          <Col xs={12} md={12}>
+            <h1>Or Subscribe!</h1>
             <Image src={Background} />          
           </Col>        
         </Row>
