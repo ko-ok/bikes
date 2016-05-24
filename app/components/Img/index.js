@@ -7,6 +7,7 @@
  */
 
 import React, { PropTypes } from 'react';
+import styles from 'components/HomePage/styles.css'
 
 export default class Img extends React.Component {
   constructor(props) {
@@ -19,10 +20,10 @@ export default class Img extends React.Component {
   }
 
   onImageLoad() {
-     let thisState = this;
+    let thisState = this;
     setTimeout(function() {
       thisState.setState({ loaded: true });
-    }, 1000)
+    }, 10000)
   }
 
   componentDidMount() {
@@ -32,13 +33,19 @@ export default class Img extends React.Component {
 
   render() {
     var { className, ...props } = this.props;
-    var rootClassName = className ? className + ' image' : 'image';
+    var rootClassName = className ? className : className;
+    let imgString;
+
     if (this.state.loaded) {
-      rootClassName += ' image-loaded';
+      imgString=<img className={styles.logo, styles.image, styles.image_loaded} src={this.props.src} />
+    } else {
+      imgString=<img className={styles.logo, styles.image} src={this.props.src} />
     }
 
     return (
-      <img className={rootClassName} src={this.props.src} />
+      <div>
+        {imgString}
+      </div>
     )
   }
 }

@@ -92,12 +92,12 @@ a {
   opacity: 1; 
 }
 
-img.image { 
+.image { 
   opacity: 0; 
-  transition: opacity 5.0s; 
+  transition: opacity 1.0s; 
 }
 
-img.image-loaded { 
+.image-loaded { 
   opacity: 1; 
 }
 
