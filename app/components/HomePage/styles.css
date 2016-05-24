@@ -74,3 +74,21 @@ a {
   font-size: 103px;
 }
 
+.background {
+  opacity: 0; 
+  transition: opacity 1.0s;
+}
+
+.background_loaded { 
+  opacity: 1; 
+}
+
+.tree_one {
+  opacity: 0; 
+  transition: opacity 1.0s; 
+}
+
+.tree_one_loaded { 
+  opacity: 1; 
+}
+
