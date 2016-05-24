@@ -33,13 +33,20 @@ export default class HomePage extends React.Component {
           <Col xs={12} md={12}>
             <Row>
               <Col xs={12} md={12}>
+                <div className={styles.header}>
+                  <h1 className={styles.header_text}>Ease <br />to the <br />East</h1>           
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} md={12}>
                 <div className={styles.nav}>
                   <a href="#who" className={styles.a}>Who</a>
                   <a href="#what" className={styles.a}>What</a>
                   <a href="#where" className={styles.a}>Where</a>              
                 </div>
               </Col>
-            </Row>
+            </Row>            
             <Image className={styles.logo} src={Background} />
             <Image className={styles.logo} src={Tree5} />
             <Image className={styles.logo} src={Tree4} />

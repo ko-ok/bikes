@@ -49,11 +49,28 @@ body.fontLoaded {
 a {
   padding: 10px;
   color: #fff;
+  font-size: 3rem;
+  border: 1px solid white;
+  margin: 10px;
+  width: 3vw;
 }
 
 .nav {
   position: absolute;
   z-index: 100;
-  float: right;
+  right: 100px;
+  top: 50px;
+}
+
+.header {
+  position: absolute;
+  z-index: 100;
+  left: 100px;
+  top: 50px;
+  color: #fff;
+}
+
+.header h1 {
+  font-size: 103px;
 }
 
