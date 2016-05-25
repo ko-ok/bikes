@@ -52,9 +52,12 @@ module.exports = (options) => ({
     }, {
       test: /\.json$/,
       loader: 'json-loader',
-    },{
+    }, {
       test: /\.mp4$/,
       loader: 'url?limit=10000&mimetype=video/mp4'
+    }, {
+      test: /\.MOV$/,
+      loader: 'url?limit=10000&mimetype=video/mov'
     }
     ],
   },
