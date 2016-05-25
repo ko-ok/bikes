@@ -71,8 +71,9 @@ a {
 .header {
   position: absolute;
   z-index: 100;
-  left: 100px;
-  top: 50px;
+  left: 50%;
+  top: 50%;
+  border: 1px solid #fff;
   color: #fff;
 }
 

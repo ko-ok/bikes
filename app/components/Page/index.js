@@ -32,7 +32,7 @@ export default class Page extends React.Component {
             <Row>
               <Col xs={12} md={12}>
                 <div className={styles.header}>
-                  <h1 className={styles.header_text}>Ease <br />to the <br />East</h1>           
+                  <h1 className={styles.header_text}>Ease to the East</h1>           
                 </div>
               </Col>
             </Row>
@@ -58,36 +58,73 @@ export default class Page extends React.Component {
         </Row>
         <Row id="who" className="section">
           <Col xs={12} md={12}>
-            <h1>Who we are</h1>            
+            <h1>Hi.</h1>
+            <h3>We're twins traveling to Halifax on bike. We want you to come along with us - huffing, sweaty, and full of undercooked beans. We'll save you a bite too.</h3>
           </Col>        
         </Row>
         <Row id="what" className="section">
           <Col xs={12} md={12}>
-            <h1>What we are doing</h1>            
+            <Row>
+              <Col xs={6} md={6}>
+                <h1>THE WAY</h1>
+                <Image src={require('./../assets/biketrail1.png')} />
+              </Col>
+              <Col xs={6} md={6}>                
+                <h1>THE WOW</h1>
+                <Image src={require('./../assets/037.JPG')} />
+
+                <h1>THE WORDS</h1>
+                <a href="www.google.com">Some blog page? or something else</a>
+              </Col>
+            </Row>
           </Col>        
         </Row>
         <Row id="where" className="section">
           <Col xs={12} md={12}>
-            <h1>Where we are going</h1>            
-          </Col>        
-        </Row>
-        <Row id="where" className="section">
-          <Col xs={12} md={12}>
-            <h1>How you can help?</h1>            
-          </Col>        
-        </Row>
-        <Row id="where" className="section">
-          <Col xs={12} md={12}>
-            <h1>Or Subscribe!</h1>            
+            <Row>
+              <Col xs={6} md={6}>
+                <h1>The REASON</h1>            
+                <p> We were born silent as clamshells. Three months premature, out of water too soon. We got lucky though, 90 odd days in intensive care, lovely parents, a lifetime to learn how to open and be open ourselves</p>
+                <p> Yet as we find some different yet still quiet clamsells on this trip, we hope to help in small handfuls. We will be raising money for the Canadian Premature Babies Foundation. Please feel free to donate. Nothing is too little, the big evidence being found in us.</p>
+                <button> Donate </button>
+              </Col>
+              <Col xs={6} md={6}>
+                <Row>
+                  <Col xs={12} md={12}>
+                    <Image src={require('./../assets/hosp.pdf')} />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col xs={6} md={6}>
+                    <Image src={require('./../assets/carbabies.jpg')} />
+                  </Col>
+                  <Col xs={6} md={6}>
+                    <Row> 
+                      <Col xs={12} md={12}>
+                        <Image src={require('./../assets/legraised.jpg')} />
+                      </Col>
+                    </Row>
+                    <Row> 
+                      <Col xs={12} md={12}>
+                        <Image src={require('./../assets/reckless.jpg')} />
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>            
           </Col>        
         </Row>
         <Row id="footer" className="section">
           <Col xs={12} md={12}>
             <div className="video_container">
               <div className="video_overlay">
+                <h1> Subscribe for weekly updates!</h1>
+                <input type="email"/>
+                <button> Submit </button>
               </div>           
-              <video autoplay muted loop>
-                <source src={require('./video.mp4')} type="video/mp4" />
+              <video autoplay controls muted loop>
+                <source src={require('./../assets/050.MOV')} type="video/MOV" />
               </video>   
             </div>
           </Col>        
