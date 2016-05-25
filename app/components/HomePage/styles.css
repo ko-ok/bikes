@@ -40,10 +40,16 @@ body.fontLoaded {
   margin: 0 auto;
   display: block;
   position: absolute;
+  height: 100vh;
 }
 
 .site_row {
-  height: 500vh;
+  height: 100%;
+  display: inline-block;
+}
+
+.logo.non_first_row {
+  position: relative;
 }
 
 a {

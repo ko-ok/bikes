@@ -26,8 +26,8 @@ export default class Page extends React.Component {
   render() {
     return (
       <div>
-        <Row className={styles.site_row}>
-          <Col xs={12} md={12}>
+        <Row>
+          <Col xs={12} md={12}>            
             <Row>
               <Col xs={12} md={12}>
                 <div className={styles.header}>
@@ -45,40 +45,39 @@ export default class Page extends React.Component {
               </Col>
             </Row>            
             <Image className={styles.logo} src={Background} />
-
-            <Img className={styles.logo} src={Tree2} timeSet={1} />
-            <Img className={styles.logo} src={Tree1} timeSet={2} />
-            
+            <Image className={styles.logo} src={Tree5} />
+            <Image className={styles.logo} src={Tree4} />
+            <Image className={styles.logo} src={Tree3} />
+            <Image className={styles.logo} src={Tree2} />
+            <Image className={styles.logo} src={Tree1} />
+            <Image className={styles.logo} src={Sun} />
+            <Image className={styles.logo} src={Clouds} />
+            <Image className={styles.logo} src={Birds} />            
           </Col>        
         </Row>
-        <Row id="who" className={styles.site_row}>
+        <Row id="who">
           <Col xs={12} md={12}>
-            <h1>Who we are</h1>
-            <Image src={Background} />          
+            <h1>Who we are</h1>            
           </Col>        
         </Row>
-        <Row id="what" className={styles.site_row}>
+        <Row id="what">
           <Col xs={12} md={12}>
-            <h1>What we are doing</h1>
-            <Image src={Background} />          
+            <h1>What we are doing</h1>            
           </Col>        
         </Row>
-        <Row id="where" className={styles.site_row}>
+        <Row id="where">
           <Col xs={12} md={12}>
-            <h1>Where we are going</h1>
-            <Image src={Background} />          
+            <h1>Where we are going</h1>            
           </Col>        
         </Row>
-        <Row id="where" className={styles.site_row}>
+        <Row id="where">
           <Col xs={12} md={12}>
-            <h1>How you can help?</h1>
-            <Image src={Background} />          
+            <h1>How you can help?</h1>            
           </Col>        
         </Row>
-        <Row id="where" className={styles.site_row}>
+        <Row id="where">
           <Col xs={12} md={12}>
-            <h1>Or Subscribe!</h1>
-            <Image src={Background} />          
+            <h1>Or Subscribe!</h1>            
           </Col>        
         </Row>
       </div>
