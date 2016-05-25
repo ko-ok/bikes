@@ -21,8 +21,6 @@ import Sun from './bikingbackground_T6.png';
 // import videoEx from './video.mp4';
 import Img from 'components/Img';
 import styles from 'components/HomePage/styles.css'
-import Video from 'react-html5video';
-import ReactPlayer from 'react-player'
 
 /* eslint-disable react/prefer-stateless-function */
 export default class Page extends React.Component {
@@ -85,11 +83,13 @@ export default class Page extends React.Component {
         </Row>
         <Row id="footer" className="section">
           <Col xs={12} md={12}>
-            <h1> Video? </h1>
-            <ReactPlayer
-              url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
-              playing={true}
-            />     
+            <div className="video_container">
+              <div className="video_overlay">
+              </div>           
+              <video autoplay muted loop>
+                <source src={require('./video.mp4')} type="video/mp4" />
+              </video>   
+            </div>
           </Col>        
         </Row>
       </div>
