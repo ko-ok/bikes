@@ -18,8 +18,11 @@ import Tree5 from './bikingbackground_T5.png';
 import Clouds from './bikingbackground_T7.png';
 import Birds from './bikingbackground_T8.png';
 import Sun from './bikingbackground_T6.png';
+// import videoEx from './video.mp4';
 import Img from 'components/Img';
 import styles from 'components/HomePage/styles.css'
+import Video from 'react-html5video';
+import ReactPlayer from 'react-player'
 
 /* eslint-disable react/prefer-stateless-function */
 export default class Page extends React.Component {
@@ -55,29 +58,38 @@ export default class Page extends React.Component {
             <Image className={styles.logo} src={Birds} />            
           </Col>        
         </Row>
-        <Row id="who">
+        <Row id="who" className="section">
           <Col xs={12} md={12}>
             <h1>Who we are</h1>            
           </Col>        
         </Row>
-        <Row id="what">
+        <Row id="what" className="section">
           <Col xs={12} md={12}>
             <h1>What we are doing</h1>            
           </Col>        
         </Row>
-        <Row id="where">
+        <Row id="where" className="section">
           <Col xs={12} md={12}>
             <h1>Where we are going</h1>            
           </Col>        
         </Row>
-        <Row id="where">
+        <Row id="where" className="section">
           <Col xs={12} md={12}>
             <h1>How you can help?</h1>            
           </Col>        
         </Row>
-        <Row id="where">
+        <Row id="where" className="section">
           <Col xs={12} md={12}>
             <h1>Or Subscribe!</h1>            
+          </Col>        
+        </Row>
+        <Row id="footer" className="section">
+          <Col xs={12} md={12}>
+            <h1> Video? </h1>
+            <ReactPlayer
+              url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+              playing={true}
+            />     
           </Col>        
         </Row>
       </div>
