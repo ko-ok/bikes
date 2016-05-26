@@ -67,11 +67,11 @@ export default class Page extends React.Component {
             <Row>
               <Col xs={6} md={6}>
                 <h1>THE WAY</h1>
-                <Image src={require('./../../assets/biketrail1.png')} />
+                <Image className="img-row" src={require('./../../assets/biketrail1.png')} />
               </Col>
               <Col xs={6} md={6}>                
                 <h1>THE WOW</h1>
-                <Image src={require('./../../assets/037.JPG')} />
+                <Image className="img-row" src={require('./../../assets/037.JPG')} />
 
                 <h1>THE WORDS</h1>
                 <a href="www.google.com">Some blog page? or something else</a>
@@ -91,22 +91,22 @@ export default class Page extends React.Component {
               <Col xs={6} md={6}>
                 <Row>
                   <Col xs={12} md={12}>
-                    <Image src={require('./../../assets/hosp.png')} />
+                    <Image className="img-row" src={require('./../../assets/hosp.png')} />
                   </Col>
                 </Row>
                 <Row>
                   <Col xs={6} md={6}>
-                    <Image src={require('./../../assets/carbabies.jpg')} />
+                    <Image className="img-row" src={require('./../../assets/carbabies.jpg')} />
                   </Col>
                   <Col xs={6} md={6}>
                     <Row> 
                       <Col xs={12} md={12}>
-                        <Image src={require('./../../assets/legraised.jpg')} />
+                        <Image className="img-row" src={require('./../../assets/legraised.jpg')} />
                       </Col>
                     </Row>
                     <Row> 
                       <Col xs={12} md={12}>
-                        <Image src={require('./../../assets/reckless.jpg')} />
+                        <Image className="img-row" src={require('./../../assets/reckless.jpg')} />
                       </Col>
                     </Row>
                   </Col>
