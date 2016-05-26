@@ -65,7 +65,8 @@ a {
   width: 3vw;
   font-family:'Freescpt';
   font-style: normal;
-  font-weight:400
+  font-weight:400;
+  font-size: 45pt;
 }
 
 .nav {
@@ -78,14 +79,14 @@ a {
 .header {
   position: absolute;
   z-index: 100;
-  left: 25%;
-  top: 130px;
+  left: 22.5%;
+  top: 500px;
   border: 1px solid #fff;
   color: #fff;
 }
 
 .header h1 {
-  font-size: 103px;
+  font-size: 100pt;
 }
 
 .background {

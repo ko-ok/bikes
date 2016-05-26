@@ -58,8 +58,16 @@ export default class Page extends React.Component {
         </Row>
         <Row id="who" className="section">
           <Col xs={12} md={12}>
-            <h1>Hi.</h1>
-            <h3>We're twins traveling to Halifax on bike. We want you to come along with us - huffing, sweaty, and full of undercooked beans. We'll save you a bite too.</h3>
+            <Row>
+              <Col className="hi" xs={6} md={6}>
+                <h1>Hi.</h1>
+                <h3>We're twins traveling to Halifax on bike. We want you to come along with us - huffing, sweaty, and full of undercooked beans. We'll save you a bite too.</h3>
+              </Col>
+              <Col xs={6} md={6}>
+                <Image className="img-row" src={require('./../../assets/bikegif_waving.gif')} />
+                <Image className="img-row" src={require('./../../assets/face.png')} />
+              </Col>
+            </Row>
           </Col>        
         </Row>
         <Row id="what" className="section">
@@ -124,7 +132,7 @@ export default class Page extends React.Component {
                 <button> Submit </button>
               </div>           
               <video autoplay controls muted loop>
-                <source src={require('./../../assets/050.MOV')} type="video/MOV" />
+                <source src={require('./../../assets/Biking1.mp4')} type="video/mp4" />
               </video>   
             </div>
           </Col>        
