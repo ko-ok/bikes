@@ -1,7 +1,7 @@
 /* Global styles */
 @font-face{
   font-family:'Freescpt'; 
-  src: url(../../assets/fonts/FREESCPT.TTF) format('truetype')
+  src: require('../../assets/fonts/FREESCPT.TTF') format('truetype')
 }
 
 html,
@@ -63,7 +63,7 @@ a {
   border: 1px solid white;
   margin: 10px;
   width: 3vw;
-  font-family:'Freescpt';
+  font-family: 'Freescpt';
   font-style: normal;
   font-weight:400;
   font-size: 45pt;

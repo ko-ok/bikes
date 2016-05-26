@@ -31,6 +31,7 @@ export default class Page extends React.Component {
       userId: '2245723916',
       accessToken: '3269895369.1677ed0.8c5fdf7251fc42088f1967eff659a2db'
     });
+
     feed.run();
   }
 
@@ -74,8 +75,8 @@ export default class Page extends React.Component {
                 <h3>We're twins traveling to Halifax on bike. We want you to come along with us - huffing, sweaty, and full of undercooked beans. We'll save you a bite too.</h3>
               </Col>
               <Col xs={6} md={6}>
-                <Image className="img-row" src={require('./../../assets/bikegif_waving.gif')} />
-                <Image className="img-row" src={require('./../../assets/face.png')} />
+                <Image className="img-row waving" src={require('./../../assets/croppedwaving.gif')} />
+                <Image className="img-row glasses" src={require('./../../assets/face2.png')} />
               </Col>
             </Row>
           </Col>        
@@ -84,15 +85,15 @@ export default class Page extends React.Component {
           <Col xs={12} md={12}>
             <Row>
               <Col xs={6} md={6}>
-                <h1>THE WAY</h1>
-                <Image className="img-row" src={require('./../../assets/biketrail1.png')} />
+                <h1 id="way">THE WAY</h1>
+                <Image className="img-row" src={require('./../../assets/trail2BOTHRIDERS.gif')} />
               </Col>
               <Col xs={6} md={6}>                
-                <h1>THE WOW</h1>
+                <h1 id="wow">THE WOW</h1>
                 <div id="instafeed"></div>
 
-                <h1>THE WORDS</h1>
-                <a href="www.google.com">Bikes are Art</a>
+                <h1 id="words">THE WORDS</h1>
+                <a id="blog" href="www.google.com">Bikes are Art</a>
               </Col>
             </Row>
           </Col>        
@@ -101,10 +102,10 @@ export default class Page extends React.Component {
           <Col xs={12} md={12}>
             <Row>
               <Col xs={6} md={6}>
-                <h1>The REASON</h1>            
-                <p> We were born silent as clamshells. Three months premature, out of water too soon. We got lucky though, 90 odd days in intensive care, lovely parents, a lifetime to learn how to open and be open ourselves</p>
-                <p> Yet as we find some different yet still quiet clamsells on this trip, we hope to help in small handfuls. We will be raising money for the Canadian Premature Babies Foundation. Please feel free to donate. Nothing is too little, the big evidence being found in us.</p>
-                <button> Donate </button>
+                <h1 className="reason">THE REASON</h1>            
+                <p className="reason-p"> We were born silent as clamshells. Three months premature, out of water too soon. We got lucky though, 90 odd days in intensive care, lovely parents, a lifetime to learn how to open and be open ourselves</p>
+                <p className="reason-p"> Yet as we find some different yet still quiet clamsells on this trip, we hope to help in small handfuls. We will be raising money for the Canadian Premature Babies Foundation. Please feel free to donate. Nothing is too little, the big evidence being found in us.</p>
+                <button className="donate"> Donate </button>
               </Col>
               <Col xs={6} md={6}>
                 <Row>
