@@ -21,9 +21,19 @@ import Sun from './bikingbackground_T6.png';
 // import videoEx from './video.mp4';
 import Img from 'components/Img';
 import styles from 'components/HomePage/styles.css'
+import Instafeed from 'instafeed.js'
 
 /* eslint-disable react/prefer-stateless-function */
 export default class Page extends React.Component {
+  componentDidMount() {
+    var feed = new Instafeed({
+      get: 'user',
+      userId: '2245723916',
+      accessToken: '3269895369.1677ed0.8c5fdf7251fc42088f1967eff659a2db'
+    });
+    feed.run();
+  }
+
   render() {
     return (
       <div>
@@ -79,10 +89,10 @@ export default class Page extends React.Component {
               </Col>
               <Col xs={6} md={6}>                
                 <h1>THE WOW</h1>
-                <Image className="img-row" src={require('./../../assets/037.JPG')} />
+                <div id="instafeed"></div>
 
                 <h1>THE WORDS</h1>
-                <a href="www.google.com">Some blog page? or something else</a>
+                <a href="www.google.com">Bikes are Art</a>
               </Col>
             </Row>
           </Col>        
