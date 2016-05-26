@@ -44,6 +44,9 @@ module.exports = (options) => ({
       test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file?name=fonts/[name].[hash].[ext]&mimetype=application/octet-stream',
     }, {
+      test: /\.TTF(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'file?name=fonts/[name].[hash].[ext]&mimetype=application/octet-stream',
+    }, {
       test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file?name=fonts/[name].[hash].[ext]',
     }, {

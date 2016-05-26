@@ -1,4 +1,8 @@
 /* Global styles */
+@font-face{
+  font-family:'Freescpt'; 
+  src: url(../../assets/fonts/FREESCPT.TTF) format('truetype')
+}
 
 html,
 body {
@@ -54,11 +58,14 @@ body.fontLoaded {
 
 a {
   padding: 10px;
-  color: #fff;
+  color: #fff !important;
   font-size: 3rem;
   border: 1px solid white;
   margin: 10px;
   width: 3vw;
+  font-family:'Freescpt';
+  font-style: normal;
+  font-weight:400
 }
 
 .nav {
@@ -71,8 +78,8 @@ a {
 .header {
   position: absolute;
   z-index: 100;
-  left: 50%;
-  top: 50%;
+  left: 25%;
+  top: 130px;
   border: 1px solid #fff;
   color: #fff;
 }
