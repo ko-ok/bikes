@@ -45,6 +45,7 @@ body.fontLoaded {
   display: block;
   position: absolute;
   height: 100vh;
+  left: 0;
 }
 
 .site_row {
@@ -79,8 +80,8 @@ a {
 .header {
   position: absolute;
   z-index: 100;
-  left: 22.5%;
-  top: 500px;
+  left: 10%;
+  top: 50vh;
   border: 1px solid #fff;
   color: #fff;
 }
