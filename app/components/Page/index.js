@@ -110,7 +110,7 @@ export default class Page extends React.Component {
                 <p className="reason-p"> Yet as we find some different yet still quiet clamsells on this trip, we hope to help in small handfuls. We will be raising money for the Canadian Premature Babies Foundation. Please feel free to donate. Nothing is too little, the big evidence being found in us.</p>
                 <button className="donate"> Donate </button>
               </Col>
-              <Col className="col-bi" md={6}>
+              <Col className="col-bi img-di" md={6}>
                 <Row>
                   <Col md={12}>
                     <Image className="img-row img-babies" src={require('./../../assets/hosp.png')} />
@@ -123,12 +123,12 @@ export default class Page extends React.Component {
                   <Col className="pic-col" md={6}>
                     <Row> 
                       <Col md={12}>
-                        <Image className="img-row" src={require('./../../assets/legraised.jpg')} />
+                        <Image className="img-row leg-raised" src={require('./../../assets/legraised.jpg')} />
                       </Col>
                     </Row>
                     <Row> 
                       <Col md={12}>
-                        <Image className="img-row" src={require('./../../assets/reckless.jpg')} />
+                        <Image className="img-row reckless" src={require('./../../assets/reckless.jpg')} />
                       </Col>
                     </Row>
                   </Col>
