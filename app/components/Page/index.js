@@ -42,7 +42,7 @@ export default class Page extends React.Component {
     return (
       <div>
         <Row>
-          <Col md={12}>            
+          <Col className="main"  md={12}>            
             <Row>
               <Col md={12}>
                 <div className={styles.header}>
@@ -71,7 +71,7 @@ export default class Page extends React.Component {
           </Col>        
         </Row>
         <Row id="who" className="section">
-          <Col md={12}>
+          <Col className="main"  md={12}>
             <Row>
               <Col className="col-bi hi" md={6}>
                 <h1>Hi.</h1>
@@ -85,7 +85,7 @@ export default class Page extends React.Component {
           </Col>        
         </Row>
         <Row id="what" className="section">
-          <Col md={12}>
+          <Col className="main" md={12}>
             <Row>
               <Col className="col-bi" md={6}>
                 <h1 id="way">THE WAY</h1>
@@ -102,7 +102,7 @@ export default class Page extends React.Component {
           </Col>        
         </Row>
         <Row id="where" className="section">
-          <Col md={12}>
+          <Col className="main"  md={12}>
             <Row>
               <Col className="col-bi" md={6}>
                 <h1 className="reason">THE REASON</h1>            
