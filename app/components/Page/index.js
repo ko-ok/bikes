@@ -29,7 +29,8 @@ export default class Page extends React.Component {
     var feed = new Instafeed({
       get: 'user',
       userId: '2245723916',
-      accessToken: '3269895369.1677ed0.8c5fdf7251fc42088f1967eff659a2db'
+      accessToken: '3269895369.1677ed0.8c5fdf7251fc42088f1967eff659a2db',
+      limit: 9
     });
 
     feed.run();
@@ -72,11 +73,11 @@ export default class Page extends React.Component {
         <Row id="who" className="section">
           <Col md={12}>
             <Row>
-              <Col className="hi" md={6}>
+              <Col className="col-bi hi" md={6}>
                 <h1>Hi.</h1>
                 <h3>We're twins traveling to Halifax on bike. We want you to come along with us - huffing, sweaty, and full of undercooked beans. We'll save you a bite too.</h3>
               </Col>
-              <Col md={6}>
+              <Col className="col-bi" md={6}>
                 <Image className="img-row waving" src={require('./../../assets/croppedwaving.gif')} />
                 <Image className="img-row glasses" src={require('./../../assets/face2.png')} />
               </Col>
@@ -86,11 +87,11 @@ export default class Page extends React.Component {
         <Row id="what" className="section">
           <Col md={12}>
             <Row>
-              <Col md={6}>
+              <Col className="col-bi" md={6}>
                 <h1 id="way">THE WAY</h1>
-                <Image className="img-row" src={require('./../../assets/trail2BOTHRIDERS.gif')} />
+                <Image className="img-row map" src={require('./../../assets/trail2BOTHRIDERS.gif')} />
               </Col>
-              <Col md={6}>                
+              <Col className="col-bi" md={6}>                
                 <h1 id="wow">THE WOW</h1>
                 <div id="instafeed"></div>
 
@@ -103,16 +104,16 @@ export default class Page extends React.Component {
         <Row id="where" className="section">
           <Col md={12}>
             <Row>
-              <Col md={6}>
+              <Col className="col-bi" md={6}>
                 <h1 className="reason">THE REASON</h1>            
-                <p className="reason-p"> We were born silent as clamshells. Three months premature, out of water too soon. We got lucky though, 90 odd days in intensive care, lovely parents, a lifetime to learn how to open and be open ourselves</p>
+                <p className="reason-p"> We were born silent as clamshells. Three months premature, out of water too soon. We got lucky though, 90 odd days in intensive care, lovely parents, a lifetime to learn how to open and be open ourselves.</p>
                 <p className="reason-p"> Yet as we find some different yet still quiet clamsells on this trip, we hope to help in small handfuls. We will be raising money for the Canadian Premature Babies Foundation. Please feel free to donate. Nothing is too little, the big evidence being found in us.</p>
                 <button className="donate"> Donate </button>
               </Col>
-              <Col md={6}>
+              <Col className="col-bi" md={6}>
                 <Row>
                   <Col md={12}>
-                    <Image className="img-row" src={require('./../../assets/hosp.png')} />
+                    <Image className="img-row img-babies" src={require('./../../assets/hosp.png')} />
                   </Col>
                 </Row>
                 <Row>

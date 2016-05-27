@@ -1,7 +1,12 @@
 /* Global styles */
 @font-face{
-  font-family:'Freescpt'; 
-  src: require('../../assets/fonts/FREESCPT.TTF') format('truetype')
+  font-family:'freescpt';
+  src: require(../../assets/fonts/freescpt.eot);
+  src: require(../../assets/fonts/freescpt.eot?#iefix) format('embedded-opentype'),
+  require(../../assets/fonts/freescpt.woff2) format('woff2'),
+  require(../../assets/fonts/freescpt.woff) format('woff'),
+  require(../../assets/fonts/freescpt.ttf) format('truetype'),
+  require(../../assets/fonts/freescpt.svg) format('svg')
 }
 
 html,
@@ -64,7 +69,7 @@ a {
   border: 1px solid white;
   margin: 10px;
   width: 3vw;
-  font-family: 'Freescpt';
+  font-family: 'freescpt';
   font-style: normal;
   font-weight:400;
   font-size: 45pt;
@@ -88,6 +93,7 @@ a {
 
 .header h1 {
   font-size: 100pt;
+  font-family: 'freescpt';
 }
 
 .background {
