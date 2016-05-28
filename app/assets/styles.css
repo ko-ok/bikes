@@ -1,4 +1,24 @@
 /* Global styles */
+@font-face{
+  font-family: 'freescpt';
+  src: url(/fonts/freescpt.eot);
+  src: url(/fonts/freescpt.eot?#iefix) format('embedded-opentype'),
+  url(/fonts/freescpt.woff2) format('woff2'),
+  url(/fonts/freescpt.woff) format('woff'),
+  url(/fonts/freescpt.ttf) format('truetype'),
+  url(/fonts/freescpt.svg) format('svg')
+}
+
+@font-face{
+  font-family: 'coolvetica';
+  src: url(/fonts/coolvetica.eot);
+  src: url(/fonts/coolvetica.eot?#iefix) format('embedded-opentype'),
+  url(/fonts/coolvetica.woff2) format('woff2'),
+  url(/fonts/coolvetica.woff) format('woff'),
+  url(/fonts/coolvetica.ttf) format('truetype'),
+  url(/fonts/coolvetica.svg) format('svg');
+}
+
 
 html,
 body {
@@ -7,11 +27,11 @@ body {
 }
 
 body {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'freescpt' !important;
 }
 
 body.fontLoaded {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'freescpt' !important;
 }
 
 :global(#app) {

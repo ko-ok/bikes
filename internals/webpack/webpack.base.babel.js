@@ -13,6 +13,25 @@ module.exports = (options) => ({
   }, options.output), // Merge with env dependent settings
   module: {
     loaders: [{
+      test: /\.jpe?g$|\.gif$|\.png$|\.svg$/i,
+      loader: 'url-loader?limit=100000',
+    }, {
+      test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'file?name=fonts/[name].[hash].[ext]&mimetype=application/font-woff',
+    }, {
+      test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'file?name=fonts/[name].[hash].[ext]&mimetype=application/font-woff',
+    }, {
+      test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'file?name=fonts/[name].[hash].[ext]&mimetype=application/octet-stream',
+    }, {
+      test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'file?name=fonts/[name].[hash].[ext]',
+    },
+    {
+      test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'file?name=fonts/[name].[hash].[ext]',
+    }, {
       test: /\.js$/, // Transform all .js files required somewhere with Babel
       loader: 'babel',
       exclude: /node_modules/,
@@ -31,12 +50,6 @@ module.exports = (options) => ({
       test: /\.css$/,
       include: /node_modules/,
       loaders: ['style-loader', 'css-loader'],
-    }, {
-      test: /\.jpe?g$|\.gif$|\.png$|\.svg$/i,
-      loader: 'url-loader?limit=10000',
-    }, {
-          test: /\.(eot|svg|ttf|woff|woff2)$/,
-          loader: 'file?name=app/assets/fonts/[name].[ext]'
     }, {
       test: /\.html$/,
       loader: 'html-loader',
