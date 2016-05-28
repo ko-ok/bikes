@@ -20,7 +20,7 @@ import Birds from './bikingbackground_T8.png';
 import Sun from './bikingbackground_T6.png';
 // import videoEx from './video.mp4';
 import Img from 'components/Img';
-import styles from 'components/HomePage/styles.css'
+import styles from './../../assets/styles.css'
 import Instafeed from 'instafeed.js'
 
 /* eslint-disable react/prefer-stateless-function */

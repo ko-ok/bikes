@@ -1,13 +1,4 @@
 /* Global styles */
-@font-face{
-  font-family:'freescpt';
-  src: require(../../assets/fonts/freescpt.eot);
-  src: require(../../assets/fonts/freescpt.eot?#iefix) format('embedded-opentype'),
-  require(../../assets/fonts/freescpt.woff2) format('woff2'),
-  require(../../assets/fonts/freescpt.woff) format('woff'),
-  require(../../assets/fonts/freescpt.ttf) format('truetype'),
-  require(../../assets/fonts/freescpt.svg) format('svg')
-}
 
 html,
 body {
@@ -16,7 +7,7 @@ body {
 }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 body.fontLoaded {

@@ -7,7 +7,7 @@
  */
 
 import React, { PropTypes } from 'react';
-import styles from 'components/HomePage/styles.css'
+import styles from './../../assets/styles.css'
 
 export default class Img extends React.Component {
   constructor(props) {
