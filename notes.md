@@ -1,0 +1,7 @@
+- animations
+- donate button
+- blog link/blogs
+- instagram setup with some pics
+- email subscriber
+- image gif waving pixelated
+- FONTS
