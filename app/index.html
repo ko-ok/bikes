@@ -9,10 +9,57 @@
   <link rel="manifest" href="manifest.json">
   <meta name="mobile-web-app-capable" content="yes">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 
   <!-- Optional theme -->
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css"> -->
 <style>
+
+  #mc_embed_signup {
+    clear: left;
+    font: 14px Helvetica,Arial,sans-serif;
+    position: absolute;
+    width: 50%;
+    text-align: center;
+    left: 25%;
+    z-index: 1000;
+    background: lightgrey;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    top: 25%;
+    border-radius: 8px;
+  }
+
+  input[type="text"], textarea {
+    background-color : #d1d1d1; 
+  }
+
+  #mc_embed_signup .mc-field-group {
+    width: 73%;
+    display: inline-block;
+  } 
+
+  #mc_embed_signup .mc-field-group,
+  #mc_embed_signup .clear {
+    top: 15px;
+    position: relative;
+  }
+
+  #mc_embed_signup .mc-field-group input {
+    width: 100%;
+    background: #fff;
+  }
+
+  #mc_embed_signup .clear {
+    width: 23%;
+    display:inline-block;
+  }
+
+  #mc_embed_signup .button {
+    background: rgb(21,127,88);
+    position: relative;
+    top: -10px;
+  }
 
   @keyframes bobble {
       0% {
@@ -39,23 +86,23 @@
 
   @keyframes cloudsFloat {
       0% {
-          transform: translate3d(400px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
           animation-timing-function: ease-in;
       }
       25% {
-          transform: translate3d(0px, 20px, 0px);
+          transform: translate3d(-100px, 20px, 0px);
           animation-timing-function: ease-out;
       }
       50% {
-          transform: translate3d(-400px, -20px, 0px);
+          transform: translate3d(-200px, -20px, 0px);
           animation-timing-function: ease-out;
       }
       75% {
-          transform: translate3d(0px, 20px, 0px);
+          transform: translate3d(-100px, 20px, 0px);
           animation-timing-function: ease-out;
       }
       100% {
-          transform: translate3d(400px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
           animation-timing-function: ease-in;
       }
   }
@@ -68,10 +115,10 @@
   }
 
   .image-container.cloudsFloat {
-    -webkit-animation: cloudsFloat 80s infinite; /* Safari 4+ */
-    -moz-animation:    cloudsFloat 80s infinite; /* Fx 5+ */
-    -o-animation:      cloudsFloat 80s infinite; /* Opera 12+ */
-    animation:         cloudsFloat 100s infinite
+    -webkit-animation: cloudsFloat 50s infinite; /* Safari 4+ */
+    -moz-animation:    cloudsFloat 50s infinite; /* Fx 5+ */
+    -o-animation:      cloudsFloat 50s infinite; /* Opera 12+ */
+    animation:         cloudsFloat 50s infinite
   }
 
   #who {
@@ -324,6 +371,6 @@
 <body>
   <!-- The app hooks into this div -->
   <div id="app"></div>
-  <!-- A lot of magic happens in this file. HtmlWebpackPlugin automatically includes all assets (e.g. bundle.js, main.css) with the correct HTML tags, which is why they are missing in this HTML file. Don't add any assets here! (Check out webpackconfig.js if you want to know more) -->
+  <!-- A lot of magic happens in this file. HtmlWebpackPlugin automatically includes all assets (e.g. bundle.js, main.css) with the correct HTML tags, which is why they are missing in this HTML file. Don't add any assets here! (Check out webpackconfig.js if you want to know more) -->  
 </body>
 </html>
