@@ -1,11 +1,3 @@
-
-/**
- *
- * Img.react.js
- *
- * Renders an image, enforcing the usage of the alt="" tag
- */
-
 import React, { PropTypes } from 'react';
 import styles from './../../assets/styles.css'
 
@@ -21,9 +13,10 @@ export default class Img extends React.Component {
 
   onImageLoad() {
     let thisState = this;
+
     setTimeout(function() {
       thisState.setState({ loaded: true });
-    }, 10000)
+    }, thisState.state.timeSet)
   }
 
   componentDidMount() {
@@ -37,13 +30,13 @@ export default class Img extends React.Component {
     let imgString;
 
     if (this.state.loaded) {
-      imgString=<img className={styles.logo, styles.image, styles.image_loaded} src={this.props.src} />
+      imgString=<img className={'img-loaded', styles.logo, styles.image, styles.image_loaded} src={this.props.src} />
     } else {
       imgString=<img className={styles.logo, styles.image} src={this.props.src} />
     }
 
     return (
-      <div>
+      <div className="image-container">
         {imgString}
       </div>
     )

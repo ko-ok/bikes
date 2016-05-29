@@ -59,15 +59,15 @@ export default class Page extends React.Component {
                 </div>
               </Col>
             </Row>            
-            <Image className={styles.logo} src={Background} />
-            <Image className={styles.logo} src={Tree5} />
-            <Image className={styles.logo} src={Tree4} />
-            <Image className={styles.logo} src={Tree3} />
-            <Image className={styles.logo} src={Tree2} />
-            <Image className={styles.logo} src={Tree1} />
-            <Image className={styles.logo} src={Sun} />
-            <Image className={styles.logo} src={Clouds} />
-            <Image className={styles.logo} src={Birds} />            
+            <Img className={styles.logo} timeSet={1} src={Background} />
+            <Img className={styles.logo} timeSet={100} src={Tree5} />
+            <Img className={styles.logo} timeSet={500} src={Tree4} />
+            <Img className={styles.logo} timeSet={700} src={Tree3} />
+            <Img className={styles.logo} timeSet={800} src={Tree2} />
+            <Img className={styles.logo} timeSet={900} src={Tree1} />
+            <Img className={styles.logo} timeSet={1000} src={Sun} />
+            <Img className={styles.logo} timeSet={1000} src={Clouds} />
+            <Img className={styles.logo} timeSet={1000} src={Birds} />            
           </Col>        
         </Row>
         <Row id="who" className="section">
