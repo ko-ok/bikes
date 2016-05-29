@@ -1,4 +1,9 @@
+## ToDo
+
 - donate button
 - instagram setup with some pics
 - image gif waving pixelated
 - FONTS
+- deploying
+
+## Deploy
