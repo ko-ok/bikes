@@ -17,6 +17,43 @@
   <link rel="stylesheet" href="/assets/bootstrap-theme.min.css"> -->
 <style>
 
+  @keyframes bobble {
+      0% {
+          transform: translate3d(50px, 40px, 0px);
+          animation-timing-function: ease-in;
+      }
+      25% {
+          transform: translate3d(-450px, 0px, 0px);
+          animation-timing-function: ease-out;
+      }
+      50 {
+          transform: translate3d(0px, 280px, 0px);
+          animation-timing-function: ease-out;
+      }
+      75% {
+         transform: translate3d(370px, -80px, 0px);
+          animation-timing-function: ease-out;
+      }
+      100% {
+          transform: translate3d(50px, 40px, 0px);
+          animation-timing-function: ease-in;
+      }
+  }
+
+  img.bobble {
+    -webkit-animation: bobble 15s infinite; /* Safari 4+ */
+    -moz-animation:    bobble 15s infinite; /* Fx 5+ */
+    -o-animation:      bobble 15s infinite; /* Opera 12+ */
+    animation:         bobble 15s infinite
+  }
+
+  .image-container.bobble {
+    -webkit-animation: bobble 15s infinite; /* Safari 4+ */
+    -moz-animation:    bobble 15s infinite; /* Fx 5+ */
+    -o-animation:      bobble 15s infinite; /* Opera 12+ */
+    animation:         bobble 15s infinite
+  }
+
   #who {
     margin-top: 112vh;
     border-top: 45px solid rgb(21,127,88);
@@ -32,6 +69,10 @@
     left: 0;
     top: 0;
     transition: all .2s ease-in-out;
+  }
+
+  #main {
+    position: absolute;
   }
 
   .image-container {

@@ -67,7 +67,7 @@ export default class Page extends React.Component {
             <Img className={styles.logo} timeSet={500} src={Tree1} />
             <Img className={styles.logo} timeSet={2900} src={Sun} />
             <Img className={styles.logo} timeSet={2700} src={Clouds} />
-            <Img className={styles.logo} timeSet={3300} src={Birds} />            
+            <Img className={styles.logo} animation={'repeat'} animationType={'bird'} timeSet={3300} src={Birds} />            
           </Col>        
         </Row>
         <Row id="who" className="section">

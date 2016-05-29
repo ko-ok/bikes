@@ -1,3 +1,4 @@
+- animations
 - donate button
 - blog link/blogs
 - instagram setup with some pics
