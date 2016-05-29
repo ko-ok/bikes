@@ -19,6 +19,13 @@
   url(/fonts/coolvetica.svg) format('svg');
 }
 
+@keyframes fadein {
+  0% { opacity: 0}
+  50% { opacity: 0}
+  80% { opacity: 0}
+  100% { opacity: 1}
+}
+
 html,
 body {
   height: 100%;
@@ -83,6 +90,7 @@ a {
   font-style: normal;
   font-weight:400;
   font-size: 45pt;
+  animation: fadein 4.5s;
 }
 
 .nav {
@@ -99,37 +107,10 @@ a {
   top: 50vh;
   border: 1px solid #fff;
   color: #fff;
+  animation: fadein 4.5s;
 }
 
 .header h1 {
   font-size: 100pt;
   font-family: 'freescpt';
 }
-
-.background {
-  opacity: 0; 
-  transition: opacity 1.0s;
-}
-
-.background_loaded { 
-  opacity: 1; 
-}
-
-.tree_one {
-  opacity: 0; 
-  transition: opacity 1.0s; 
-}
-
-.tree_one_loaded { 
-  opacity: 1; 
-}
-
-.image { 
-  opacity: 0; 
-  transition: opacity 5.0s; 
-}
-
-.image-loaded { 
-  opacity: 1; 
-}
-

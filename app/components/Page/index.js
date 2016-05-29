@@ -1,12 +1,3 @@
-// <Image className={styles.logo} src={Tree5} />
-// <Image className={styles.logo} src={Tree4} />
-// <Image className={styles.logo} src={Tree3} />
-// <Image className={styles.logo} src={Tree2} />
-// <Image className={styles.logo} src={Tree1} />
-// <Image className={styles.logo} src={Sun} />
-// <Image className={styles.logo} src={Clouds} />
-// <Image className={styles.logo} src={Birds} />
-
 import React from 'react';
 import { Button, Jumbotron, Row, Col, Image } from 'react-bootstrap';
 import Background from './bikingbackground_RS.jpg';
@@ -18,7 +9,6 @@ import Tree5 from './bikingbackground_T5.png';
 import Clouds from './bikingbackground_T7.png';
 import Birds from './bikingbackground_T8.png';
 import Sun from './bikingbackground_T6.png';
-// import videoEx from './video.mp4';
 import Img from 'components/Img';
 import styles from './../../assets/styles.css'
 import Instafeed from 'instafeed.js'
