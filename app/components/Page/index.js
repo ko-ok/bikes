@@ -66,7 +66,7 @@ export default class Page extends React.Component {
             <Img className={styles.logo} timeSet={1000} src={Tree2} />
             <Img className={styles.logo} timeSet={500} src={Tree1} />
             <Img className={styles.logo} timeSet={2900} src={Sun} />
-            <Img className={styles.logo} timeSet={2700} src={Clouds} />
+            <Img className={styles.logo} animation={'repeat'} animationType={'clouds'} timeSet={2700} src={Clouds} />
             <Img className={styles.logo} animation={'repeat'} animationType={'bird'} timeSet={3300} src={Birds} />            
           </Col>        
         </Row>
@@ -91,12 +91,13 @@ export default class Page extends React.Component {
                 <h1 id="way">THE WAY</h1>
                 <Image className="img-row map" src={require('./../../assets/trail2BOTHRIDERS.gif')} />
               </Col>
-              <Col className="col-bi" md={6}>                
+              <Col className="col-bi words" md={6}>                
                 <h1 id="wow">THE WOW</h1>
                 <div id="instafeed"></div>
-
+                <br />
+                <br />
                 <h1 id="words">THE WORDS</h1>
-                <a id="blog" href="www.google.com">Bikes are Art</a>
+                <a id="blog" href="http://www.kacperniburski.com">Steering our blog.</a>
               </Col>
             </Row>
           </Col>        

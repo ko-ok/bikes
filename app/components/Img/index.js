@@ -43,9 +43,14 @@ export default class Img extends React.Component {
     let imgString;
     let classDiv = this.state.loaded ? 'image-container loaded' : 'image-container'
     if (this.state.loaded) {
-      if (this.state.animation) {
-        classDiv += ' bobble'
-      } 
+      switch(this.state.animationType) {
+          case 'bird':
+            classDiv += ' bobble'
+            break;
+          case 'clouds':
+            classDiv += ' cloudsFloat'
+            break;
+        }
       imgString=<img className={'img-loaded', styles.logo, styles.image, styles.image_loaded} src={this.props.src} />
     } else {
       imgString=<img className={styles.logo, styles.image} src={this.props.src} />

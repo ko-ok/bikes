@@ -26,7 +26,7 @@
           transform: translate3d(-450px, 0px, 0px);
           animation-timing-function: ease-out;
       }
-      50 {
+      50% {
           transform: translate3d(0px, 280px, 0px);
           animation-timing-function: ease-out;
       }
@@ -40,11 +40,51 @@
       }
   }
 
-  img.bobble {
-    -webkit-animation: bobble 15s infinite; /* Safari 4+ */
-    -moz-animation:    bobble 15s infinite; /* Fx 5+ */
-    -o-animation:      bobble 15s infinite; /* Opera 12+ */
-    animation:         bobble 15s infinite
+  @keyframes cloudsFloat {
+      0% {
+          transform: translate3d(1750px, 40px, 0px);
+          animation-timing-function: ease-in;
+      }
+      10% {
+          transform: translate3d(1500px, -40px, 0px);
+          animation-timing-function: ease-out;
+      }
+      20% {
+          transform: translate3d(1000px, 40px, 0px);
+          animation-timing-function: ease-out;
+      }
+      30% {
+         transform: translate3d(500px, -80px, 0px);
+          animation-timing-function: ease-out;
+      }
+      40% {
+        transform: translate3d(0px, 40px, 0px);
+          animation-timing-function: ease-out;
+      }
+      50% {
+          transform: translate3d(-500px, -40px, 0px);
+          animation-timing-function: ease-out;
+      }
+      60% {
+          transform: translate3d(-1000px, 40px, 0px);
+          animation-timing-function: ease-out;
+      }
+      70% {
+         transform: translate3d(500px, -80px, 0px);
+          animation-timing-function: ease-out;
+      }
+      80% {
+         transform: translate3d(1000px, -20px, 0px);
+          animation-timing-function: ease-out;
+      }
+      90% {
+         transform: translate3d(1500px, -80px, 0px);
+          animation-timing-function: ease-out;
+      }
+      100% {
+          transform: translate3d(1750px, 40px, 0px);
+          animation-timing-function: ease-in;
+      }
   }
 
   .image-container.bobble {
@@ -52,6 +92,13 @@
     -moz-animation:    bobble 15s infinite; /* Fx 5+ */
     -o-animation:      bobble 15s infinite; /* Opera 12+ */
     animation:         bobble 15s infinite
+  }
+
+  .image-container.cloudsFloat {
+    -webkit-animation: cloudsFloat 15s infinite; /* Safari 4+ */
+    -moz-animation:    cloudsFloat 15s infinite; /* Fx 5+ */
+    -o-animation:      cloudsFloat 15s infinite; /* Opera 12+ */
+    animation:         cloudsFloat 15s infinite
   }
 
   #who {
@@ -111,7 +158,9 @@
     color: rgb(21,127,88) !important;
     text-align: center;
     margin: auto;
-    border: 1px solid rgb(21,127,88);
+    /*border: 1px solid rgb(21,127,88);*/
+    text-decoration: none;
+    font-size: 30pt;
   }
 
   a {
@@ -193,6 +242,10 @@
 
   .row .col-bi.img-di {
     padding: 0 50px 0 50px !important;
+  }
+
+  .row .col-bi.words {
+    text-align: center;
   }
 
   .row .img-row.img-babies {
