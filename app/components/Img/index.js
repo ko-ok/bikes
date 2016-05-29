@@ -28,7 +28,7 @@ export default class Img extends React.Component {
     var { className, ...props } = this.props;
     var rootClassName = className ? className : className;
     let imgString;
-
+    let classDiv = this.state.loaded ? 'image-container loaded' : 'image-container'
     if (this.state.loaded) {
       imgString=<img className={'img-loaded', styles.logo, styles.image, styles.image_loaded} src={this.props.src} />
     } else {
@@ -36,7 +36,7 @@ export default class Img extends React.Component {
     }
 
     return (
-      <div className="image-container">
+      <div className={classDiv}>
         {imgString}
       </div>
     )

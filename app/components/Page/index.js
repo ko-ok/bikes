@@ -60,14 +60,14 @@ export default class Page extends React.Component {
               </Col>
             </Row>            
             <Img className={styles.logo} timeSet={1} src={Background} />
-            <Img className={styles.logo} timeSet={100} src={Tree5} />
-            <Img className={styles.logo} timeSet={500} src={Tree4} />
-            <Img className={styles.logo} timeSet={700} src={Tree3} />
-            <Img className={styles.logo} timeSet={800} src={Tree2} />
-            <Img className={styles.logo} timeSet={900} src={Tree1} />
-            <Img className={styles.logo} timeSet={1000} src={Sun} />
-            <Img className={styles.logo} timeSet={1000} src={Clouds} />
-            <Img className={styles.logo} timeSet={1000} src={Birds} />            
+            <Img className={styles.logo} timeSet={2500} src={Tree5} />
+            <Img className={styles.logo} timeSet={2000} src={Tree4} />
+            <Img className={styles.logo} timeSet={1500} src={Tree3} />
+            <Img className={styles.logo} timeSet={1000} src={Tree2} />
+            <Img className={styles.logo} timeSet={500} src={Tree1} />
+            <Img className={styles.logo} timeSet={2900} src={Sun} />
+            <Img className={styles.logo} timeSet={2700} src={Clouds} />
+            <Img className={styles.logo} timeSet={3300} src={Birds} />            
           </Col>        
         </Row>
         <Row id="who" className="section">
