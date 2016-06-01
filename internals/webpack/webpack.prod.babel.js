@@ -49,11 +49,6 @@ module.exports = require('./webpack.base.babel')({
     new webpack.optimize.DedupePlugin(),
 
     // Minify and optimize the JavaScript
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false, // ...but do not show warnings in the console (there is a lot of them)
-      },
-    }),
 
     // Minify and optimize the index.html
     new HtmlWebpackPlugin({
@@ -93,5 +88,5 @@ module.exports = require('./webpack.base.babel')({
         additional: ['*.chunk.js'],
       },
     }),
-  ],
+  ]
 });

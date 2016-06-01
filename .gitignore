@@ -8,3 +8,4 @@ coverage
 bower_components
 
 app/config/secrets.js
+public/

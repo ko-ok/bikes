@@ -16,8 +16,6 @@ import React from 'react';
 // Import the CSS reset, which HtmlWebpackPlugin transfers to the build folder
 import 'sanitize.css/sanitize.css';
 
-import Img from 'components/Img';
-
 /* eslint-disable react/prefer-stateless-function */
 export default class App extends React.Component {
 
