@@ -9,7 +9,7 @@
   "author": "Oskar Niburski",
   "license": "MIT",
   "scripts": {
-    "start": "if [ \"$NODE_ENV\" = \"production\" ]; then npm run serve-prod && npm run start:prod; else npm run start_dev; fi",
+    "start": "if [ \"$NODE_ENV\" = \"production\" ]; then npm run start:prod; else npm run start_dev; fi",
     "start_dev": "npm run start:tunnel",
     "prebuild": "npm run build:clean",
     "build:clean": "rimraf ./app/public/* && rimraf ./public/*",
