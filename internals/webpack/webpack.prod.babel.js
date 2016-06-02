@@ -18,11 +18,7 @@ module.exports = require('./webpack.base.babel')({
 
   // Utilize long-term caching by adding content hashes (not compilation hashes) to compiled assets
   output: {
-    filename: '[name].[chunkhash].js',
-    chunkFilename: '[name].[chunkhash].chunk.js',
-    path: ('../../../', 'public'),
-    filename: 'bundle.js',
-    publicPath: '../../../public/'
+    filename: 'bundle.js'
   },
 
   // We use ExtractTextPlugin so we get a seperate CSS file instead
@@ -52,6 +48,11 @@ module.exports = require('./webpack.base.babel')({
     new webpack.optimize.DedupePlugin(),
 
     // Minify and optimize the JavaScript
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false, // ...but do not show warnings in the console (there is a lot of them)
+      },
+    }),
 
     // Minify and optimize the index.html
     new HtmlWebpackPlugin({
@@ -77,7 +78,6 @@ module.exports = require('./webpack.base.babel')({
     // Put it in the end to capture all the HtmlWebpackPlugin's
     // assets manipulations and do leak its manipulations to HtmlWebpackPlugin
     new OfflinePlugin({
-      relativePaths: true, // Use generated relative paths by default
       // No need to cache .htaccess. See http://mxs.is/googmp,
       // this is applied before any match in `caches` section
       excludes: ['.htaccess'],
@@ -90,6 +90,15 @@ module.exports = require('./webpack.base.babel')({
         // do not want them to be preloaded at all (cached only when first loaded)
         additional: ['*.chunk.js'],
       },
+
+      // Removes warning for about `additional` section usage
+      safeToUseOptionalCaches: true,
+
+      AppCache: {
+        // Starting from offline-plugin:v3, AppCache by default caches only
+        // `main` section. This lets it use `additional` section too
+        caches: ['main', 'additional'],
+      },
     }),
-  ]
+  ],
 });
