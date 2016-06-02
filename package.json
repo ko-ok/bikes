@@ -9,7 +9,7 @@
   "author": "Oskar Niburski",
   "license": "MIT",
   "scripts": {
-    "start": "npm run serve-prod && npm run start:prod",
+    "start": "npm run build && npm run start:prod",
     "start_dev": "npm run start:tunnel",
     "build": "NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js", 
     "start_dev": "npm run start:tunnel",
