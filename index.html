@@ -1,8 +1,377 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-  </head>
-  <body>
-    <script type="text/javascript" src="/public/bundle.js"></script>
-  </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- The first thing in any HTML file should be the charset -->
+  <meta charset="utf-8">
+  <!-- Make the page mobile compatible -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Allow installing the app to the homescreen -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+
+  <!-- Optional theme -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css"> -->
+<style>
+
+  #mc_embed_signup {
+    clear: left;
+    font: 14px Helvetica,Arial,sans-serif;
+    position: absolute;
+    width: 50%;
+    text-align: center;
+    left: 25%;
+    z-index: 1000;
+    background: lightgrey;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    top: 25%;
+    border-radius: 8px;
+  }
+
+  input[type="text"], textarea {
+    background-color : #d1d1d1; 
+  }
+
+  #mc_embed_signup .mc-field-group {
+    width: 73%;
+    display: inline-block;
+  } 
+
+  #mc_embed_signup .mc-field-group,
+  #mc_embed_signup .clear {
+    top: 15px;
+    position: relative;
+  }
+
+  #mc_embed_signup .mc-field-group input {
+    width: 100%;
+    background: #fff;
+  }
+
+  #mc_embed_signup .clear {
+    width: 23%;
+    display:inline-block;
+  }
+
+  #mc_embed_signup .button {
+    background: rgb(21,127,88);
+    position: relative;
+    top: -10px;
+  }
+
+  @keyframes bobble {
+      0% {
+          transform: translate3d(50px, 40px, 0px);
+          animation-timing-function: ease-in;
+      }
+      25% {
+          transform: translate3d(-450px, 0px, 0px);
+          animation-timing-function: ease-out;
+      }
+      50% {
+          transform: translate3d(0px, 280px, 0px);
+          animation-timing-function: ease-out;
+      }
+      75% {
+         transform: translate3d(370px, -80px, 0px);
+          animation-timing-function: ease-out;
+      }
+      100% {
+          transform: translate3d(50px, 40px, 0px);
+          animation-timing-function: ease-in;
+      }
+  }
+
+  @keyframes cloudsFloat {
+      0% {
+          transform: translate3d(0px, 0px, 0px);
+          animation-timing-function: ease-in;
+      }
+      25% {
+          transform: translate3d(-100px, 20px, 0px);
+          animation-timing-function: ease-out;
+      }
+      50% {
+          transform: translate3d(-200px, -20px, 0px);
+          animation-timing-function: ease-out;
+      }
+      75% {
+          transform: translate3d(-100px, 20px, 0px);
+          animation-timing-function: ease-out;
+      }
+      100% {
+          transform: translate3d(0px, 0px, 0px);
+          animation-timing-function: ease-in;
+      }
+  }
+
+  .image-container.bobble {
+    -webkit-animation: bobble 15s infinite; /* Safari 4+ */
+    -moz-animation:    bobble 15s infinite; /* Fx 5+ */
+    -o-animation:      bobble 15s infinite; /* Opera 12+ */
+    animation:         bobble 15s infinite
+  }
+
+  .image-container.cloudsFloat {
+    -webkit-animation: cloudsFloat 50s infinite; /* Safari 4+ */
+    -moz-animation:    cloudsFloat 50s infinite; /* Fx 5+ */
+    -o-animation:      cloudsFloat 50s infinite; /* Opera 12+ */
+    animation:         cloudsFloat 50s infinite
+  }
+
+  #who {
+    margin-top: 112vh;
+    border-top: 45px solid rgb(21,127,88);
+  }
+
+  .image-container img {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    bottom: 0;
+    transition: all .2s ease-in-out;
+  }
+
+  #main {
+    position: absolute;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 0vh;
+    bottom: -100vh;
+    left: 0;
+    position: absolute;
+    transform: scaleY(0);
+    /*transform-origin: top;*/
+    transition: transform .8s ease-in-out;
+    /*-webkit-transition: height 0.8s;
+    -moz-transition: height 0.8s;
+    transition: height 0.8s;*/
+    /*transform: scale(0);*/
+    /*transform-origin:; center bottom;*/
+  }
+
+  .image-container.loaded {
+    /*transform: scale(1.0);*/
+    transform: scaleY(1);
+    /*bottom: 0;*/
+    /*height: 100vh;*/
+  }
+
+  #way, #wow, #words {
+    font-size: 45pt;
+    text-align: center;
+  }
+
+  #instafeed {
+    text-align: center;
+  }
+
+  #blog {
+    color: rgb(21,127,88) !important;
+    text-align: center;
+    margin: auto;
+    /*border: 1px solid rgb(21,127,88);*/
+    text-decoration: none;
+    font-size: 30pt;
+  }
+
+  a {
+    font-size: 45pt;
+  }
+
+  .section {
+    border-top: 45px solid rgb(21,127,88);
+    border-bottom: 45px solid rgb(21,127,88);
+  }
+
+  .section div.col-md-12 {
+     padding: 0 !important; 
+     margin-left: 0 !important; 
+     margin-right: 0 !important;
+     width: 100%;
+  } 
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #what, #where, #footer {
+    margin: 100px 0;
+  }
+
+  .section div.col-md-12 {
+    padding: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  #footer {
+    margin-bottom: 20px;
+    border-bottom: 30px solid rgb(21,127,88);
+  }
+
+  video {
+    width: 100%;
+    max-height: 1000px;
+  }
+
+  #where .row,
+  #where .col-md-12,
+  #where .col-md-6,
+  .section .row,
+  .section .col-md-6,
+  .section .col-md-12 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .donate {
+    width: 100%;
+    height: 75px;
+    background: #C0F2F7;
+    font-size: 40pt;
+    color: #fff;
+    border: 1px solid rgb(21,127,88);
+  }
+
+  .reason {
+    font-size: 42pt;
+  }
+
+  p.reason-p {
+    font-size: 21.75pt;
+    font-weight: 600;
+  }
+
+  .hi h1 {
+    font-size: 90pt;
+  }
+
+  .img-row.car-babies {
+    height: 325px;
+  }
+
+  .row .col-bi.img-di {
+    padding: 0 50px 0 50px !important;
+  }
+
+  .row .col-bi.words {
+    text-align: center;
+  }
+
+  .row .img-row.img-babies {
+    height: 300px;
+    width: 97%;
+  }
+
+  .row .img-row.reckless,
+  .row .img-row.leg-raised {
+    height: 160px;
+  }
+
+  #who div.main.col-md-12,
+  #where div.main.col-md-12,
+  #what div.main.col-md-12 {
+    margin-top: 75px;
+    margin-bottom: 75px;
+  }
+
+  .hi h3 {
+    font-size: 30pt;
+  }
+
+  .img-row {
+    width: 100%;
+    max-height: 600px;
+  }
+
+  .img-row.img-babies {
+    /*height: 300px;*/
+  }
+
+  .img-row.map {
+    height: 600px;
+    border: 1px solid grey;
+  }
+
+  .row .col-bi {
+    padding: 0 0 0 100px !important;
+  }
+
+  .img-row.waving {
+    width: 42%;
+    height: 600px;
+  }
+
+  .img-row.car-babies,
+  .img-row.leg-raised,
+  .img-row.reckless,
+  .img-row.img-babies {
+    border: 1px solid grey;
+    margin: 3px;
+  }
+
+  .img-row.glasses {
+    height: 600px;
+    width: 31%;
+    position: relative;
+    top: 12px;
+  }
+  
+  a {
+    color: white;
+  }
+
+  .video_overlay {
+    width: 100%;
+    /* max-height: 25vh; */
+    height: 150%;
+    background: lightgrey;
+    z-index: 5;
+    position: absolute;
+    opacity: 0.6;
+    top: 0px;
+    filter: alpha(opacity=60);
+    left: -33px;
+  }
+
+  #footer {
+    margin-bottom: 0;
+    border-bottom: none;    
+  }
+
+  .section h1,
+  .section p,
+  .section h3 {
+    color: rgb(21,127,88);
+  }
+
+  .car-babies {
+    /*width: 64vh;*/
+  }
+
+  .pic-col {
+    width: 48%;
+    margin-right: 3px !important;
+    margin-left: 3px !important;
+  }
+
+</style>
+<title>Ease To The East</title>
+</head>
+<body>
+  <!-- The app hooks into this div -->
+  <div id="app"></div>
+  <!-- A lot of magic happens in this file. HtmlWebpackPlugin automatically includes all assets (e.g. bundle.js, main.css) with the correct HTML tags, which is why they are missing in this HTML file. Don't add any assets here! (Check out webpackconfig.js if you want to know more) -->
+   <script type="text/javascript" src="bundle.js"></script>  
+</body>
 </html>
