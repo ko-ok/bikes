@@ -23,9 +23,9 @@ module.exports = require('./webpack.base.babel')({
   output: {
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',
-    path: path.join(__dirname, 'public'),
+    path: ('../../../', 'public'),
     filename: 'bundle.js',
-    publicPath: '/public/'
+    publicPath: '../../../public/'
   },
 
   // Load the CSS in a style tag in development

@@ -9,9 +9,8 @@
   "author": "Oskar Niburski",
   "license": "MIT",
   "scripts": {
-    "start": "npm run build:clean && npm run build && npm run start:prod",
+    "start": "npm run serve-prod && npm run start:prod",
     "start_dev": "npm run start:tunnel",
-    "prebuild": "npm run build:clean",
     "build": "NODE_ENV=production webpack --config internals/webpack/webpack.prod.babel.js", 
     "start_dev": "npm run start:tunnel",
     "build:clean": "rimraf ./app/public/bundle.* && rimraf ./public/bundle.*",

@@ -29,6 +29,7 @@ app.listen(port, (err) => {
 
   // Connect to ngrok in dev mode
   if (isDev) {
+    console.log("Starting dev application")
     ngrok.connect(port, (innerErr, url) => {
       if (innerErr) {
         return logger.error(innerErr);
@@ -37,6 +38,7 @@ app.listen(port, (err) => {
       logger.appStarted(port, url);
     });
   } else {
+    console.log("Starting prod application")
     logger.appStarted(port);
   }
 });
