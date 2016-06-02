@@ -4,7 +4,12 @@
 - instagram setup with some pics
 - image gif waving pixelated
 - FONTS
+- mp4 to youtube or load properly
 - deploying
 
 ## Deploy
-// "postinstall": "if [ \"$NODE_ENV\" = \"production\" ]; then npm run build; fi",
+- npm run prod_build
+- git add .
+- git commit -m "Prod build"
+- git push heroku master
+- runs npm run start on production
