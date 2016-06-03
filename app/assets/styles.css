@@ -1,13 +1,4 @@
 /* Global styles */
-@font-face{
-  font-family: 'freescpt';
-  src: url(./freescpt.ttf) format('truetype')
-}
-
-@font-face{
-  font-family: 'coolvetica';
-  src: url(./coolvetica.ttf) format('truetype')
-}
 
 @keyframes fadein {
   0% { opacity: 0}
