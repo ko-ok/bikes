@@ -17,20 +17,20 @@ module.exports = (options) => ({
       loader: 'url-loader?limit=100000',
     }, {
       test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file?name=fonts/[name].[ext]&mimetype=application/font-woff',
+      loader: 'file?name=[name].[ext]&mimetype=application/font-woff',
     }, {
       test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file?name=fonts/[name].[ext]&mimetype=application/font-woff',
+      loader: 'file?name=[name].[ext]&mimetype=application/font-woff',
     }, {
       test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file?name=fonts/[name].[ext]&mimetype=application/octet-stream',
+      loader: 'file?name=[name].[ext]&mimetype=application/octet-stream',
     }, {
       test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file?name=fonts/[name].[ext]',
+      loader: 'file?name=[name].[ext]',
     },
     {
       test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file?name=fonts/[name].[hash].[ext]',
+      loader: 'file?name=[name].[hash].[ext]',
     }, {
       test: /\.js$/, // Transform all .js files required somewhere with Babel
       loader: 'babel',

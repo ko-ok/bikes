@@ -9,6 +9,7 @@
 
 ## Deploy
 - npm run prod_build
+- inspect index.html in public
 - git add .
 - git commit -m "Prod build"
 - git push heroku master

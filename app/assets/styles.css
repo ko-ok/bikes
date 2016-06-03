@@ -1,22 +1,12 @@
 /* Global styles */
 @font-face{
   font-family: 'freescpt';
-  src: url(/fonts/freescpt.eot);
-  src: url(/fonts/freescpt.eot?#iefix) format('embedded-opentype'),
-  url(/fonts/freescpt.woff2) format('woff2'),
-  url(/fonts/freescpt.woff) format('woff'),
-  url(/fonts/freescpt.ttf) format('truetype'),
-  url(/fonts/freescpt.svg) format('svg')
+  src: url(./freescpt.ttf) format('truetype')
 }
 
 @font-face{
   font-family: 'coolvetica';
-  src: url(/fonts/coolvetica.eot);
-  src: url(/fonts/coolvetica.eot?#iefix) format('embedded-opentype'),
-  url(/fonts/coolvetica.woff2) format('woff2'),
-  url(/fonts/coolvetica.woff) format('woff'),
-  url(/fonts/coolvetica.ttf) format('truetype'),
-  url(/fonts/coolvetica.svg) format('svg');
+  src: url(./coolvetica.ttf) format('truetype')
 }
 
 @keyframes fadein {
@@ -33,11 +23,11 @@ body {
 }
 
 body {
-  font-family: 'freescpt' !important;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 body.fontLoaded {
-  font-family: 'freescpt' !important;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 :global(#app) {

@@ -13,8 +13,6 @@ import { Button, Jumbotron, Row, Col, Image } from 'react-bootstrap';
 import Img from 'components/Img';
 import styles from './../../assets/styles.css'
 import Page from 'components/Page';
-import bootstrapStyles from 'assets/bootstrap.min.css'
-import bootstrapThemeStyles from 'assets/bootstrap-theme.min.css'
 
 let renderedString;
 
