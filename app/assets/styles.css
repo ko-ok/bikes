@@ -23,11 +23,13 @@ body {
 }
 
 body {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  // font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 body.fontLoaded {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  // font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 :global(#app) {
@@ -76,11 +78,11 @@ a {
   border: 1px solid white;
   margin: 10px;
   width: 3vw;
-  font-family: 'freescpt';
   font-style: normal;
   font-weight:400;
   font-size: 45pt;
   animation: fadein 4.5s;
+  font-family: 'Shadows Into Light', sans-serif;
 }
 
 .nav {
@@ -93,14 +95,35 @@ a {
 .header {
   position: absolute;
   z-index: 100;
-  left: 10%;
-  top: 50vh;
-  border: 1px solid #fff;
+  // width: 100%;
+  left: 25%;
+  // margin-right: -100pt;
+  top: 43vh;
   color: #fff;
   animation: fadein 4.5s;
 }
 
 .header h1 {
-  font-size: 100pt;
-  font-family: 'freescpt';
+  border: 1px solid #fff;
+  font-size: 80pt;
+  text-transform: uppercase;
+  font-family: 'Shadows Into Light', sans-serif;
+}
+
+@media screen and (max-width: 1300px) {
+  .header {
+    left: 17%;
+    font-size: 60pt;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    font-size: 30pt;
+  }
+
+  a {
+    margin: 5px;
+    font-size: 20pt
+  }
 }
