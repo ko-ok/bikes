@@ -45,7 +45,8 @@ export default class HomePage extends React.Component {
     if (this.state.loaded) {
       renderedString = <Page />
     } else {
-      renderedString = <div>Loading</div>
+      renderedString = <div style={{width: '100%', height: '100vh', background: 
+      '#FAFAFA'}}></div>
     }
     return (
       <div>
