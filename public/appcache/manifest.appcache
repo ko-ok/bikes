@@ -1,15 +1,9 @@
 CACHE MANIFEST
-#ver:6/5/2016, 10:07:18 PM
+#ver:6/5/2016, 10:33:03 PM
 
 CACHE:
 ../manifest.json
-../a82ae0a29a04baaba0cc7672ecf5e88a.mp4
-../6e1fb3780cf2dae74e69e199b84cfecb.jpg
-../24b356e19aae340efc4ad6aa163c15da.png
-../2e4d606e1ae5ae31cdc5c7177b76bd96.gif
-../8ee687e57c346d6be804c2630f5d2d16.jpg
-../0.bundle.js
-../1.bundle.js
+../common.js
 ../bundle.js
 ../
 
