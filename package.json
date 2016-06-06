@@ -24,7 +24,6 @@
     "pagespeed": "node ./internals/scripts/pagespeed.js",
     "setup": "node ./internals/scripts/setup.js",
     "presetup": "npm i chalk",
-    "clean": "shjs ./internals/scripts/clean.js",
     "generate": "plop --plopfile internals/generators/index.js",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "npm run lint:eslint && npm run lint:jscs",
@@ -36,7 +35,59 @@
     "lint:css": "stylelint ./app/**/*.css",
     "lint:css:staged": "stylelint-staged",
     "lint:staged": "npm run lint:js:staged && npm run lint:css:staged",
-    "coveralls": "cat ./coverage/lcov/lcov.info | coveralls"
+    "coveralls": "cat ./coverage/lcov/lcov.info | coveralls",
+    "deploy": "better-npm-run deploy",
+    "deploy:dev": "better-npm-run deploy:dev",
+    "deploy:prod": "better-npm-run deploy:prod",
+    "compile": "better-npm-run compile"
+  },
+  "betterScripts": {
+    "compile": {
+      "command": "babel-node bin/compile",
+      "env": {
+        "DEBUG": "app:*"
+      }
+    },
+    "dev": {
+      "command": "nodemon --exec babel-node bin/server",
+      "env": {
+        "NODE_ENV": "development",
+        "DEBUG": "app:*"
+      }
+    },
+    "deploy": {
+      "command": "npm run compile",
+      "env": {
+        "DEBUG": "app:*"
+      }
+    },
+    "deploy:dev": {
+      "command": "npm run deploy",
+      "env": {
+        "NODE_ENV": "development",
+        "DEBUG": "app:*"
+      }
+    },
+    "deploy:prod": {
+      "command": "npm run deploy",
+      "env": {
+        "NODE_ENV": "production",
+        "DEBUG": "app:*"
+      }
+    },
+    "start": {
+      "command": "babel-node bin/server",
+      "env": {
+        "DEBUG": "app:*"
+      }
+    },
+    "test": {
+      "command": "babel-node ./node_modules/karma/bin/karma start build/karma.conf",
+      "env": {
+        "NODE_ENV": "test",
+        "DEBUG": "app:*"
+      }
+    }
   },
   "pre-commit": "lint:staged",
   "babel": {
