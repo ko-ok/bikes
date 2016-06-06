@@ -8,30 +8,11 @@ const webpack = require('webpack');
 module.exports = (options) => ({
   entry: options.entry,
   output: Object.assign({ // Compile into js/build.js
-    path: path.resolve(process.cwd(), './public'),
+    path: path.resolve(process.cwd(), 'public'),
     publicPath: '/',
   }, options.output), // Merge with env dependent settings
   module: {
     loaders: [{
-      test: /\.jpe?g$|\.gif$|\.png$|\.svg$/i,
-      loader: 'url-loader?limit=100000',
-    }, {
-      test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file?name=[name].[ext]&mimetype=application/font-woff',
-    }, {
-      test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file?name=[name].[ext]&mimetype=application/font-woff',
-    }, {
-      test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file?name=[name].[ext]&mimetype=application/octet-stream',
-    }, {
-      test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file?name=[name].[ext]',
-    },
-    {
-      test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'file?name=[name].[hash].[ext]',
-    }, {
       test: /\.js$/, // Transform all .js files required somewhere with Babel
       loader: 'babel',
       exclude: /node_modules/,
@@ -51,19 +32,30 @@ module.exports = (options) => ({
       include: /node_modules/,
       loaders: ['style-loader', 'css-loader'],
     }, {
+      test: /\.jpe?g$|\.gif$|\.png$|\.svg$/i,
+      loader: 'url-loader?limit=10000',
+    }, {
+      test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'file?name=[name].[hash].[ext]&mimetype=application/font-woff',
+    }, {
+      test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'file?name=[name].[hash].[ext]&mimetype=application/font-woff',
+    }, {
+      test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'file?name=[name].[hash].[ext]&mimetype=application/octet-stream',
+    }, {
+      test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+      loader: 'file?name=[name].[hash].[ext]',
+    }, {
       test: /\.html$/,
       loader: 'html-loader',
     }, {
       test: /\.json$/,
       loader: 'json-loader',
     }, {
-      test: /\.mp4$/,
+      test: /\.(webm|mp4)$/,
       loader: 'url?limit=10000&mimetype=video/mp4'
-    }, {
-      test: /\.MOV$/,
-      loader: 'url?limit=10000&mimetype=video/mov'
-    }
-    ],
+    }],
   },
   plugins: options.plugins.concat([
     new webpack.optimize.CommonsChunkPlugin('common.js'),
