@@ -21,7 +21,10 @@ module.exports = require('./webpack.base.babel')({
 
   // Don't use hashes in dev mode for better performance
   output: {
-    // filename: 'bundle.js'
+    filename: 'bundle.js'
+    // chunkFilename: '[name].chunk.js',
+    // path: ('../../../', 'public'),  
+    // publicPath: '../../../public/'
   },
 
   // Load the CSS in a style tag in development

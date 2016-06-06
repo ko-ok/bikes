@@ -36,7 +36,8 @@ export default class Page extends React.Component {
             <Row>
               <Col md={12}>
                 <div className={styles.header}>
-                  <h1 className={styles.header_text}>Ease to the East</h1>           
+                  <h1 className={styles.header_text}>Ease to the East</h1>
+                  <h3 className={styles.header_text}>Aug 19 - Sept 8</h3> 
                 </div>
               </Col>
             </Row>
