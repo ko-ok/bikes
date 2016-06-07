@@ -6,7 +6,12 @@ import Instafeed from 'instafeed.js';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class RowWho extends React.Component {
-  componentDidMount() {   
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll(event) {
+    console.log('test')
   }
 
   render() {

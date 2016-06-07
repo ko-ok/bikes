@@ -19,6 +19,7 @@
     height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
+    background: #05271B;
   }
 
   .parallax {
@@ -47,13 +48,8 @@
   }
 
   .parallax__layer--back {
-    transform: translateZ(-4.5px) scale(5.5);
+    transform: translateZ(-7.5px) scale(8.5);
     width: 100%;
-  }
-
-  .parallax__layer--deep {
-    transform: translateZ(-2px) scale(3);
-    background: rgb(21,127,88);
   }
 
   #who.section .main.col-md-12 {
@@ -74,12 +70,13 @@
     width: 50%;
     text-align: center;
     left: 25%;
-    z-index: 1000;
+    z-index: 100000000;
     background: lightgrey;
     opacity: 0.6;
     filter: alpha(opacity=60);
     top: 25%;
     border-radius: 8px;
+    display: block;
   }
 
   input[type="text"], textarea {
@@ -111,6 +108,7 @@
     background: rgb(21,127,88);
     position: relative;
     top: -10px;
+    margin: 0;
   }
 
   @keyframes bobble {
