@@ -30,9 +30,9 @@ export default class Page extends React.Component {
 
   render() {
     return (
-      <div>
-        <Row>
-          <Col className="main"  md={12}>            
+      <div className="parallax">
+        <Row className="parallax__layer parallax__layer--back">
+          <Col className="main" md={12}>            
             <Row>
               <Col md={12}>
                 <div className={styles.header}>
@@ -61,7 +61,7 @@ export default class Page extends React.Component {
             <Img className={styles.logo} animation={'repeat'} animationType={'bird'} timeSet={3300} src={Birds} />            
           </Col>        
         </Row>
-        <Row id="who" className="section">
+        <Row id="who" className="section parallax__layer parallax__layer--base">
           <Col className="main"  md={12}>
             <Row>
               <Col className="col-bi hi" md={6}>
@@ -75,7 +75,7 @@ export default class Page extends React.Component {
             </Row>
           </Col>        
         </Row>
-        <Row id="what" className="section">
+        <Row id="what" className="section parallax__layer parallax__layer--base">
           <Col className="main" md={12}>
             <Row>
               <Col className="col-bi" md={6}>
@@ -93,7 +93,7 @@ export default class Page extends React.Component {
             </Row>
           </Col>        
         </Row>
-        <Row id="where" className="section">
+        <Row id="where" className="section parallax__layer parallax__layer--base">
           <Col className="main"  md={12}>
             <Row>
               <Col className="col-bi" md={6}>
@@ -129,7 +129,7 @@ export default class Page extends React.Component {
             </Row>            
           </Col>        
         </Row>
-        <Row id="footer" className="section">
+        <Row id="footer" className="section parallax__layer parallax__layer--base">
           <Col md={12}>
             <div className="video_container">
               <div id="mc_embed_signup">
@@ -152,7 +152,7 @@ export default class Page extends React.Component {
               </video>   
             </div>
           </Col>        
-        </Row>
+        </Row>     
       </div>
     )
   }
