@@ -10,22 +10,30 @@ import Clouds from './bikingbackground_T7.png';
 import Birds from './bikingbackground_T8.png';
 import Sun from './bikingbackground_T6.png';
 import Img from 'components/Img';
-import styles from './../../assets/styles.css'
-import Instafeed from 'instafeed.js'
+import styles from './../../assets/styles.css';
+import Instafeed from 'instafeed.js';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class Page extends React.Component {
   componentDidMount() {
-    var feed = new Instafeed({
-      get: 'user',
-      userId: '2245723916',
-      accessToken: '3269895369.1677ed0.8c5fdf7251fc42088f1967eff659a2db',
-      limit: 9
-    });
+    // var feed = new Instafeed({
+    //   get: 'user',
+    //   userId: '2245723916',
+    //   accessToken: '3269895369.1677ed0.8c5fdf7251fc42088f1967eff659a2db',
+    //   limit: 9
+    // });
 
-    feed.run();
+    // feed.run();
 
     document.getElementById('video').play()
+  }
+
+  handleWaypointEnter() {
+    console.log("in")
+  }
+
+  handleWaypointLeave() {
+    console.log("out")
   }
 
   render() {
@@ -60,7 +68,7 @@ export default class Page extends React.Component {
             <Img className={styles.logo} animation={'repeat'} animationType={'clouds'} timeSet={2700} src={Clouds} />
             <Img className={styles.logo} animation={'repeat'} animationType={'bird'} timeSet={3300} src={Birds} />            
           </Col>        
-        </Row>        
+        </Row>  
         <Row id="who" className="section parallax__layer parallax__layer--base">
           <Col className="main"  md={12}>
             <Row>
