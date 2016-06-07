@@ -61,6 +61,36 @@ export default class Page extends React.Component {
             <Img className={styles.logo} animation={'repeat'} animationType={'bird'} timeSet={3300} src={Birds} />            
           </Col>        
         </Row>
+        <Row className="parallax__layer parallax__layer--deep">
+          <Col className="main" md={12}>            
+            <Row>
+              <Col md={12}>
+                <div className={styles.header}>
+                  <h1 className={styles.header_text}>Ease to the East</h1>
+                  <h3 className={styles.header_text}>Aug 19 - Sept 8</h3> 
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={12}>
+                <div className={styles.nav}>
+                  <a href="#who" className={styles.a}>Who</a>
+                  <a href="#what" className={styles.a}>What</a>
+                  <a href="#where" className={styles.a}>Where</a>              
+                </div>
+              </Col>
+            </Row>            
+            <Img className={styles.logo} timeSet={1} src={Background} />
+            <Img className={styles.logo} timeSet={2500} src={Tree5} />
+            <Img className={styles.logo} timeSet={2000} src={Tree4} />
+            <Img className={styles.logo} timeSet={1500} src={Tree3} />
+            <Img className={styles.logo} timeSet={1000} src={Tree2} />
+            <Img className={styles.logo} timeSet={500} src={Tree1} />
+            <Img className={styles.logo} timeSet={2900} src={Sun} />
+            <Img className={styles.logo} animation={'repeat'} animationType={'clouds'} timeSet={2700} src={Clouds} />
+            <Img className={styles.logo} animation={'repeat'} animationType={'bird'} timeSet={3300} src={Birds} />            
+          </Col>        
+        </Row>
         <Row id="who" className="section parallax__layer parallax__layer--base">
           <Col className="main"  md={12}>
             <Row>
