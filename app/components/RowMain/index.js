@@ -35,8 +35,8 @@ export default class RowMain extends React.Component {
             <Col md={12}>
               <div className={styles.nav}>
                 <a href="#who" className={styles.a}>Who</a>
-                <a href="#what" className={styles.a}>What</a>
                 <a href="#where" className={styles.a}>Where</a>              
+                <a href="#what" className={styles.a}>What</a>
               </div>
             </Col>
           </Row>            

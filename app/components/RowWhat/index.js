@@ -19,14 +19,14 @@ export default class RowWhat extends React.Component {
 
   render() {
     return (
-      <Row id="what" className="section parallax__layer parallax__layer--base">
+      <Row id="where" className="section parallax__layer parallax__layer--base">
           <Col className="main" md={12}>
             <Row>
-              <Col className="col-bi" md={6}>
+              <Col className="col-bi" xs={11} md={7}>
                 <h1 id="way">THE WAY</h1>
                 <Image className="img-row map" src={require('./../../assets/trail2BOTHRIDERS.gif')} />
               </Col>
-              <Col className="col-bi words" md={6}>                
+              <Col className="col-bi words" xs={11} md={5}>                
                 <h1 id="wow">THE WOW</h1>
                 <div id="instafeed"></div>
                 <br />

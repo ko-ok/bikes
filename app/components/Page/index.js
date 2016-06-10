@@ -28,8 +28,8 @@ export default class Page extends React.Component {
       <div className="parallax">
         <RowMain />
         <RowWho />
-        <RowWhere />
         <RowWhat />
+        <RowWhere />
         <Footer />            
       </div>
     )
