@@ -36,35 +36,31 @@ export default class Page extends React.Component {
   }
 
   _handleWaypointEnter() {
-    console.log("entered")
-    // grab direction, if down show, if up hide
-    if (thisState.state.showNav) {      
-      thisState.setState({ showNav: false });
-    } else {
+    if (this._previousPosition === "inside" && this._currentPosition() === "inside") {
+      console.log("entered and setting true")
       thisState.setState({ showNav: true });
+    } else {
+      console.log("entered and setting false")
+      thisState.setState({ showNav: false });
     }
   }
 
   _handleWaypointLeave() {
-    console.log("exit")
-    thisState.setState({ showNav: false });
+    if (this._previousPosition === "inside" && this._currentPosition() === "inside") {
+      console.log("exited and setting true")
+      thisState.setState({ showNav: true });
+    } else {
+      console.log("exited and setting false")
+      thisState.setState({ showNav: false });
+    }
   }
 
   render() {
-    if (this.state.showNav) {
-      renderString = <RowNavHidden />
-    } else {
-      renderString = <div></div>
-    }
     return (
       <div>
-        {renderString}
         <div className="parallax">
           <RowMain />
-          <RowWho />
-          <Waypoint
-            onEnter={this._handleWaypointEnter}
-          />
+          <RowWho />    
           <RowWhat />
           <RowWhere />
           <Footer />            
