@@ -24,8 +24,7 @@ export default class RowWho extends React.Component {
               <h3>We're twins traveling to Halifax on bike. We want you to come along with us - huffing, sweaty, and full of undercooked beans. We'll save you a bite too.</h3>
             </Col>
             <Col className="col-bi" md={6}>
-              <Image className="img-row waving" src={require('./../../assets/croppedwaving.gif')} />
-              <Image className="img-row glasses" src={require('./../../assets/face2.png')} />
+              <Image className="img-row waving" src={require('./../../assets/WavingGIF.gif')} />              
             </Col>
           </Row>
         </Col>        
