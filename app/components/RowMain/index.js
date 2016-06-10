@@ -11,7 +11,7 @@ import Birds from 'components/Page/bikingbackground_T8.png';
 import Sun from 'components/Page/bikingbackground_T6.png';
 import Img from 'components/Img';
 import styles from './../../assets/styles.css';
-import Instafeed from 'instafeed.js';
+import { StickyContainer, Sticky } from 'react-sticky';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class RowMain extends React.Component {
@@ -21,7 +21,7 @@ export default class RowMain extends React.Component {
 
   render() {
     return (
-      <Row className="parallax__layer parallax__layer--back">
+      <Row id="home" className="parallax__layer parallax__layer--back">
         <Col className="main" md={12}>            
           <Row>
             <Col md={12}>
@@ -34,12 +34,12 @@ export default class RowMain extends React.Component {
           <Row>
             <Col md={12}>
               <div className={styles.nav}>
-                <a href="#who" className={styles.a}>Who</a>
-                <a href="#where" className={styles.a}>Where</a>              
-                <a href="#what" className={styles.a}>What</a>
+                <a href="#who" className={styles.shared}>Who</a>
+                <a href="#where" className={styles.shared}>Where</a>              
+                <a href="#what" className={styles.shared}>What</a>
               </div>
             </Col>
-          </Row>            
+          </Row>
           <Img className={styles.logo} timeSet={1} src={Background} />
           <Img className={styles.logo} timeSet={2500} src={Tree5} />
           <Img className={styles.logo} timeSet={2000} src={Tree4} />

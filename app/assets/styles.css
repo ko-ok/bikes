@@ -62,7 +62,7 @@ body.fontLoaded {
   position: relative;
 }
 
-a {
+a.shared {
   padding: 10px;
   color: #fff !important;
   font-size: 3rem;
@@ -73,6 +73,20 @@ a {
   font-weight:400;
   font-size: 45pt;
   animation: fadein 4.5s;
+  font-family: 'Shadows Into Light', sans-serif;
+}
+
+a {
+  padding: 10px;
+  color: #fff !important;
+  font-size: 3rem;
+  // border: 1px solid white;
+  margin: 10px;
+  width: 3vw;
+  font-style: normal;
+  font-weight:400;
+  font-size: 45pt;
+  animation: fadein 0.5s;
   font-family: 'Shadows Into Light', sans-serif;
 }
 

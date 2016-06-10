@@ -15,22 +15,60 @@ import RowWhere from 'components/RowWhere';
 import RowWhat from 'components/RowWhat';
 import RowWho from 'components/RowWho';
 import Footer from 'components/Footer';
+import RowNavHidden from 'components/RowNavHidden';
 import styles from './../../assets/styles.css';
 import Instafeed from 'instafeed.js';
+var Waypoint = require('react-waypoint');
+let thisState;
+let renderString;
 
 /* eslint-disable react/prefer-stateless-function */
 export default class Page extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      showNav: false
+    }
+    thisState = this;
+  }
+
   componentDidMount() {
   }
 
+  _handleWaypointEnter() {
+    console.log("entered")
+    // grab direction, if down show, if up hide
+    if (thisState.state.showNav) {      
+      thisState.setState({ showNav: false });
+    } else {
+      thisState.setState({ showNav: true });
+    }
+  }
+
+  _handleWaypointLeave() {
+    console.log("exit")
+    thisState.setState({ showNav: false });
+  }
+
   render() {
+    if (this.state.showNav) {
+      renderString = <RowNavHidden />
+    } else {
+      renderString = <div></div>
+    }
     return (
-      <div className="parallax">
-        <RowMain />
-        <RowWho />
-        <RowWhat />
-        <RowWhere />
-        <Footer />            
+      <div>
+        {renderString}
+        <div className="parallax">
+          <RowMain />
+          <RowWho />
+          <Waypoint
+            onEnter={this._handleWaypointEnter}
+          />
+          <RowWhat />
+          <RowWhere />
+          <Footer />            
+        </div>
       </div>
     )
   }
