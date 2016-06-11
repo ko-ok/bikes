@@ -114,17 +114,21 @@ a {
   margin-right: 200px;
   left: 0;
   right: 0;
-  top: 43vh;
+  top: 15vh;
   color: #fff;
   animation: fadein 4.5s;
 }
 
 .header h1 {
-  border: 1px solid #fff;
-  font-size: 70pt;
+  // border: 1px solid #fff;
+  // font-size: 70pt;
   text-transform: uppercase;
   text-align: center;
   font-family: 'Shadows Into Light', sans-serif;
+}
+
+.header h3 {
+  text-align: center;
 }
 
 @media screen and (max-width: 1300px) {
