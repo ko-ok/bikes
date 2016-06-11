@@ -7,14 +7,14 @@ import Instafeed from 'instafeed.js';
 /* eslint-disable react/prefer-stateless-function */
 export default class RowWhat extends React.Component {
   componentDidMount() { 
-   // var feed = new Instafeed({
-    //   get: 'user',
-    //   userId: '2245723916',
-    //   accessToken: '3269895369.1677ed0.8c5fdf7251fc42088f1967eff659a2db',
-    //   limit: 9
-    // });
+   var feed = new Instafeed({
+      get: 'user',
+      userId: '3269895369',
+      accessToken: '3269895369.a1a6bbc.5b890b3244f9416281d7f2d778f62ede',
+      limit: 9
+    });
 
-    // feed.run();  
+    feed.run();  
   }
 
   render() {

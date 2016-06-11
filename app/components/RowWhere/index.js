@@ -18,7 +18,13 @@ export default class RowWhere extends React.Component {
               <h1 className="reason">THE REASON</h1>            
               <p className="reason-p"> We were born silent as clamshells. Three months premature, out of water too soon. We got lucky though, 90 odd days in intensive care, lovely parents, a lifetime to learn how to open and be open ourselves.</p>
               <p className="reason-p"> Yet as we find some different yet still quiet clamsells on this trip, we hope to help in small handfuls. We will be raising money for the Canadian Premature Babies Foundation. Please feel free to donate. Nothing is too little, the big evidence being found in us.</p>
-              <button className="donate"> Donate </button>
+              
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="hidden" name="hosted_button_id" value="CJDTK2YV3X254" />
+                <button name="submit" alt="PayPal - The safer, easier way to pay online!" className="donate">Donate</button>
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+              </form>
             </Col>
             <Col className="col-bi img-di" xs={12} md={6}>
               <Row>

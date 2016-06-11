@@ -63,17 +63,24 @@ body.fontLoaded {
 }
 
 a.shared {
-  padding: 10px;
+  padding: 10px 10px 0 10px;
   color: #fff !important;
   font-size: 3rem;
   // border: 1px solid white;
-  margin: 10px;
+  margin: 10px 10px 0 10px;
   width: 3vw;
   font-style: normal;
   font-weight:400;
   font-size: 45pt;
   animation: fadein 4.5s;
   font-family: 'Shadows Into Light', sans-serif;
+  // text-decoration: underline;
+  border-bottom: 1px solid #fff;
+}
+
+a.shared:hover {
+  text-decoration: none;
+  border: none;
 }
 
 a {
@@ -101,8 +108,12 @@ a {
   position: absolute;
   z-index: 100;
   // width: 100%;
-  left: 25%;
+  // left: 25%;
   // margin-right: -100pt;
+  margin-left: 200px;
+  margin-right: 200px;
+  left: 0;
+  right: 0;
   top: 43vh;
   color: #fff;
   animation: fadein 4.5s;
@@ -111,14 +122,14 @@ a {
 .header h1 {
   border: 1px solid #fff;
   font-size: 70pt;
-  padding-right: 27px;
   text-transform: uppercase;
+  text-align: center;
   font-family: 'Shadows Into Light', sans-serif;
 }
 
 @media screen and (max-width: 1300px) {
   .header {
-    left: 17%;
+    // left: 17%;
     font-size: 60pt;
   }
 }
