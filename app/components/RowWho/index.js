@@ -17,9 +17,9 @@ export default class RowWho extends React.Component {
   render() {
     return (
       <Row id="who" className="section parallax__layer parallax__layer--base">
-        <Col className="main"  md={12}>
+        <Col className="main us" md={12}>
           <Row>
-            <Col className="col-bi hi" md={6}>
+            <Col className="col-bi hi" md={6} xs={11}>
               <h1>Hi.</h1>
               <h3>We're twins traveling to Halifax on bike. We want you to come along with us - huffing, sweaty, and full of undercooked beans. We'll save you a bite too.</h3>
             </Col>

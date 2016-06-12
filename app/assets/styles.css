@@ -101,17 +101,11 @@ a {
   position: absolute;
   z-index: 100;
   right: 100px;
-  top: 50px;
 }
 
 .header {
   position: absolute;
   z-index: 100;
-  // width: 100%;
-  // left: 25%;
-  // margin-right: -100pt;
-  margin-left: 200px;
-  margin-right: 200px;
   left: 0;
   right: 0;
   top: 15vh;
@@ -145,6 +139,6 @@ a {
 
   a {
     margin: 5px;
-    font-size: 20pt
+    font-size: 20pt !important;
   }
 }
