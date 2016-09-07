@@ -31,7 +31,7 @@ export default class RowMain extends React.Component {
                   <br/><span className="header-small">to</span>
                   <br/><span className="header-main">East</span>
                 </h1>
-                <h3 className={styles.header_text}>Aug 19 - Sept 5</h3> 
+                <h3 className={styles.header_text}>Date TBD</h3> 
               </div>
             </Col>
           </Row>
